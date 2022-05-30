@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+
+  }
+
+body {
+    background-color: rgba(44, 51, 53, 0.29);
+   /* overflow: auto; */
+
+}
+#disposition {
+    width: 450px;
+    height: 300px;
+    
+
+}
+
+section {
+    padding: 10px;
+    width: auto;
+    height: auto;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-items: baseline;
+	align-content: stretch;
+
+    
+}
+
+
+/*
+span {
+    width: 100px;
+    height: 100px;
+}
+*/
+
+img.imCours {
+    height:200px ;
+    width: 400px;
+}
+
+#link{
+
+ display: flex;
+ flex-direction: column;
+ margin-left: 30px;
+ margin-top: 5px;
+ text-decoration: none;
+ text-align: center;
+ font-weight: bold;
+
+}
+
+#link1 {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-top: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;}
+
+
+p:hover {
+    background-color: rgba(255, 255, 255, 0.464);
+
+}
+  
+    
+footer {
+        height: auto;
+        width:  auto;
+        background-color: rgb(201, 177, 97);
+   
+    }
+
+input.dim {
+    background-color: rgb(185, 143, 59);
+    border-radius: 20px;}

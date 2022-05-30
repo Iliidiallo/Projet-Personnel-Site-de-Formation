@@ -1,0 +1,26 @@
+body{
+    padding: 70px;
+
+    background-color: rgb(143, 130, 103);
+}
+
+fieldset.form{
+    border-radius: 25px;
+    background-color: rgb(40, 202, 202) ;
+    width: 500px;
+}
+
+legend{
+    margin-left: 90px;
+    font-style: italic ;
+    font-weight: bold;
+    font-size: 14px ;
+}
+
+input.btn {
+    background-color: rgb(185, 59, 59);
+    border-radius: 20px;
+    
+}
+
+
