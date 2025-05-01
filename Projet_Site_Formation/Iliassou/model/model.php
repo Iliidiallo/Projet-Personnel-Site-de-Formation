@@ -4,8 +4,7 @@
   {
       try
       {
-          $db= new PDO('mysql:host=localhost;dbname=Connection;charset=utf8', 'root','Iliassou2022@');
-
+          $db= new PDO('mysql:host=db;dbname=Connection;charset=utf8', 'root', 'Iliassou');
   
           return $db;
       }
