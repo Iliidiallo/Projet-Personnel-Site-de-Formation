@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  db:
+    image: mysql:8.0.31
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: Iliassou
+    ports:
+      - "3306:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - dev
+
+  phpmyadmin:
+    image: phpmyadmin:5.2.0-apache
+    restart: always
+    ports:
+      - "9001:80"
+    environment:
+      - PMA_ARBITRARY=0
+    networks:
+      - dev
+
+  php:
+    image: php:8.2-apache
+    container_name: php-container
+    volumes:
+      - ./Iliassou:/var/www/html
+    ports:
+      - "8888:80"
+    depends_on:
+      - db
+    networks:
+      - dev
+    command: >
+      bash -c "
+      docker-php-ext-install pdo pdo_mysql &&
+      apache2-foreground
+      "
+
+volumes:
+  db-data:
+
+networks:
+  dev:
